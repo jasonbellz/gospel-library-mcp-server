@@ -1,0 +1,71 @@
+{
+  "name": "gospel-library-mcp-server",
+  "version": "0.1.0",
+  "description": "HTTP-hosted MCP server for the Church of Jesus Christ Gospel Library — backed by Azure (Container Apps + PostgreSQL/pgvector + Azure OpenAI)",
+  "type": "module",
+  "main": "dist/index.js",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "reindex": "node dist/index.js reindex",
+    "reindex:dev": "tsx src/index.ts reindex",
+    "lint": "eslint src --ext .ts",
+    "lint:fix": "eslint src --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "key:issue": "tsx scripts/issue-key.ts",
+    "key:revoke": "tsx scripts/revoke-key.ts",
+    "key:list": "tsx scripts/list-keys.ts",
+    "schema:apply": "tsx scripts/apply-schema.ts"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gospel",
+    "church",
+    "lds",
+    "scriptures",
+    "azure",
+    "http"
+  ],
+  "author": "jasonbellz",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jasonbellz/gospel-library-mcp-server.git"
+  },
+  "dependencies": {
+    "@azure/identity": "^4.5.0",
+    "@fastify/rate-limit": "^10.2.1",
+    "@modelcontextprotocol/sdk": "^1.27.1",
+    "cheerio": "^1.2.0",
+    "fastify": "^5.2.1",
+    "lru-cache": "^11.0.2",
+    "openai": "^4.77.0",
+    "pg": "^8.13.1",
+    "pino": "^9.5.0",
+    "turndown": "^7.2.2",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/pg": "^8.11.10",
+    "@types/turndown": "^5.0.6",
+    "@typescript-eslint/eslint-plugin": "^8.20.0",
+    "@typescript-eslint/parser": "^8.20.0",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.18.0",
+    "pino-pretty": "^13.0.0",
+    "prettier": "^3.4.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3",
+    "vitest": "^2.1.8"
+  }
+}

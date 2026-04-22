@@ -137,3 +137,12 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# ─── Project-specific ──────────────────────────────────
+.env
+.env.local
+.env.*.local
+dist/
+*.tsbuildinfo
+.vscode/
+.idea/
