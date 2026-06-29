@@ -1,6 +1,6 @@
 # Gospel Library MCP Server
 
-> ⚠️ **Status:** Early development (v0.1.1). Not yet deployed.
+> ⚠️ **Status:** Early development (v0.1.0). Not yet deployed.
 
 HTTP-hosted [Model Context Protocol](https://modelcontextprotocol.io/) server providing structured access to the
 [Church of Jesus Christ Gospel Library](https://www.churchofjesuschrist.org/study/) — scriptures,
